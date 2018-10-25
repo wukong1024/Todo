@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/release/release",
+    "pages/check/check",
+    "pages/history/history",
+    "pages/mine/mine",
+    "pages/personal/personal",
+    "pages/feedback/feedback",
+    "pages/myAdd/myAdd",
+    "pages/myRelease/myRelease",
+    "pages/about/about",
+    "pages/include/include",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "海大支点",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/release/release",
+        "text": "发布",
+        "selectedIconPath": "icon/FB-2.png",
+        "iconPath": "icon/FB-1.png"
+      },
+      {
+        "pagePath": "pages/check/check",
+        "text": "查看",
+        "selectedIconPath": "icon/CK-2.png",
+        "iconPath": "icon/CK-1.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史",
+        "selectedIconPath": "icon/LS-2.png",
+        "iconPath": "icon/LS-1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "selectedIconPath": "icon/WD-2.png",
+        "iconPath": "icon/WD-1.png"
+      }
+    ],
+    "color": "#8b8b8b",
+    "backgroundColor": "white",
+    "borderStyle": "white"
+  }
+  
+}

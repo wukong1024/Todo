@@ -1,0 +1,48 @@
+.tr{text-align: right;}
+.tc{text-align: center;}
+.vm{vertical-align: middle;}
+.fl{float: left}
+.fr{float: right}
+.f12{font-size: 24rpx;}
+.f14{font-size: 28rpx;}
+.f16{font-size: 32rpx;}
+.f18{font-size: 36rpx;}
+.f20{font-size: 40rpx;}
+.fb{font-weight: 700;}
+.m10{margin: 20rpx;}
+.m15{margin: 30rpx;}
+.mt10{margin-top: 20rpx;}
+.mt15{margin-top: 30rpx;}
+.mb10{margin-bottom: 20rpx;}
+.mb15{margin-bottom: 30rpx;}
+.red{color: #e33939 !important;}
+.green{color: #27c353 !important;}
+.gray{color: #8d8d8d !important;}
+.light_blue{color: #129ef8 !important;}
+.blue{color: #337ab7 !important;}
+.yellow{color: #e4ae3a !important;}
+.border_r,.border_l{position: relative;}
+.border_r::before,.border_l::before{
+  content: '';
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #ddd;
+  transform: scaleX(0.5)
+}
+.border_r::before{
+  right: 0;
+}
+.border_l::before{
+  left: 0;
+}
+.box_common{background: #fff;  font-size: 28rpx;padding-top: 38rpx;padding-bottom: 38rpx;}
+.tag-blue{
+  font-size: 24rpx;
+  border: 1px solid #229ae6;
+  border-radius: 6rpx;
+  padding: 0 12rpx; 
+  color: #229ae6;
+  margin-right: 8rpx;
+}

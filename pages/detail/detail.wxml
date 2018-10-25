@@ -1,0 +1,46 @@
+<view class="article">
+  <view class="title">{{dreamsDateil.title}}</view>
+  <view class='gray f14'>{{dreamsDateil.author}} {{dreamsDateil.cTime}}</view>
+  <view class='content'>
+
+    <import src="../../wxParse/wxParse.wxml" />
+    <!-- content -->
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+    <!-- ps -->
+    <view class='ps'>
+      <template is="wxParse" data="{{wxParseData:ps.nodes}}"></template>
+    </view>
+  </view>
+</view>
+
+
+<view id='aaaaa'>进度：{{join_number}}/{{need_number}}</view>
+<!-- 是作者 展示用户列表 -->
+<block wx:if="{{is_author==1}}">
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">昵称</view>
+      <view class="th">QQ</view>
+    </view>
+    <block wx:for="{{listData}}" wx:key="{{code}}">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+        <text class="td too" selectable='true'>{{item.nickname}}</text>
+        <text class="td" selectable='true'>{{item.qq}}</text>
+      </view>
+      <view class="tr" wx:else>
+        <view class="td too">{{item.nickname}}</view>
+        <view class="td">{{item.qq}}</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 未过期，展示按钮 -->
+  <view wx:if="{{is_overdue!=1}}">
+    <button class='button' bindtap='endJoin'>结束招募</button>
+  </view>
+
+</block>
+
+
+<import src="../../comment/comment.wxml" />
+<template is="comment" data="{{...dreamsDateil}}"></template>

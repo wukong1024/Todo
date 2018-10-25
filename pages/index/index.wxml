@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请点击登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='row'>
+    <view class="column">
+      <view>
+        <image catchtap='changeFb' wx:if="{{clickFb}}" src='/icon/FB-11.png'></image>
+        <image wx:else src='/icon/FB-22.png'></image>
+      </view>
+      <view>
+        <image catchtap='changeWd' wx:if="{{clickWd}}" src='/icon/WD-11.png'></image>
+        <image wx:else src='/icon/WD-22.png'></image>
+      </view>
+    </view>
+    <view class='column'>
+      <view>
+        <image catchtap='changeCk' wx:if="{{clickCk}}" src='/icon/CK-11.png'></image>
+        <image wx:else src='/icon/CK-22.png'></image>
+      </view>
+      <view>
+        <image catchtap='changeLs' wx:if="{{clickLs}}" src='/icon/LS-11.png'></image>
+        <image wx:else src='/icon/LS-22.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

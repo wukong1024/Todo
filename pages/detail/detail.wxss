@@ -1,0 +1,82 @@
+@import '../../comment/comment.wxss';
+@import "/wxParse/wxParse.wxss";
+
+page{
+  background:#f5f5f5;
+}
+.article{padding: 30rpx;line-height: 2;background: #fff;box-sizing: border-box;}
+.article .title{font-size: 40rpx;font-weight: 700;}
+.article .content{font-size: 32rpx;}
+
+/* 梦想列表 */
+.dream-list .item{padding: 30rpx;position: relative}
+.dream-list .item-title{font-size: 32rpx;}
+.item-imgs{display: flex;margin: 20rpx 0;}
+.item-imgs image{flex: 1;width:230rpx; height: 148rpx;margin-right: 2rpx;}
+.dream-list .item-info{font-size: 24rpx;color: #999;}
+
+.ps{
+  font-size: 32rpx;
+  color: rgb(82, 82, 82);
+}
+
+#aaaaa{
+  font-size: 24rpx;
+  position: fixed;
+  top: 100rpx;
+  right: 50rpx;
+}
+
+.table {
+  border: 0rpx solid darkgray;
+  margin: 40rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 60rpx;
+  align-items: center;
+  font-size: 26rpx;
+}
+.td {
+    width:50%;
+    font-size: 26rpx;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+  /* font-size: 15rpx; */
+  background: rgba(252, 252, 252, 0.966);
+  border: 1rpx gainsboro solid;
+}
+.bg-g{
+  background-color:rgb(255, 255, 255);
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 60rpx;
+  align-items: center;
+}
+
+#join{
+  font-size: 28rpx;
+  position: fixed;
+  top: 50rpx;
+  right: 98rpx;
+}
+.button{
+  width: 250rpx;
+}
+.too{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+}

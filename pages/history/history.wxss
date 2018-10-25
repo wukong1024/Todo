@@ -1,0 +1,111 @@
+/* 导航 */
+.nav{white-space:nowrap;}
+.nav .item{
+  display: inline-block;
+  padding:30rpx 0;
+  font-size: 32rpx;
+  color: #949494;
+  width: 100px;
+  text-align: center
+}
+.nav .item.act{
+  color: #2e2e32;
+  position: relative;
+}
+.nav .item.act::after{
+  content: '';
+  height: 1px;
+  background: #2e2e32;
+  position: absolute;
+  bottom: 10rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+/* 搜索 */
+.search{padding: 30rpx; font-size: 28rpx;}
+.search input{background: #eff0f4;border-radius: 20px;padding: 10rpx 30rpx;text-align: center;}
+.search .input-placeholder{color: #bababa;}
+/* 梦想列表 */
+.dream-list .item-mult,.dream-list .item{ padding: 30rpx;position: relative}
+.dream-list .item{display: flex;}
+.dream-list .item .item-flex{
+  flex: 1;margin-left: 30rpx;position: relative
+}
+.dream-list .item .item-flex .item-info{position: absolute;bottom: 0;left: 0;right: 0;}
+.dream-list .item::before,.dream-list .item-mult::before{
+  content:'';position: absolute;
+  top: 0;
+  left: 30rpx;
+  right: 30rpx;
+  height: 1px;
+  background: #e9e9e9;
+  transform:scaleY(0.5);
+  }
+.dream-list .item-title{font-size: 32rpx; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;  -webkit-line-clamp: 3;   -webkit-box-orient: vertical;}
+.item-imgs{display: flex;margin: 20rpx 0;}
+.item-imgs image{width:230rpx; height: 148rpx;margin-right: 2rpx;}
+.item-mult .item-imgs image{flex: 1;}
+.dream-list .item-info{font-size: 24rpx;color: #999;height: 100rpx;padding-top: 15rpx}
+
+.not_dream{padding: 30rpx; text-align: center;font-size: 28rpx;}
+.icon{width: 32rpx;height: 32rpx;vertical-align: top;margin:0 8rpx}
+
+.bottomImage image{
+  width: 472.8rpx;
+  height: 261.6rpx;
+  /* position: absolute; */
+  bottom: 0rpx;
+  left: 138.6rpx;
+}
+
+.userinfo-avatar{
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+}
+.item-flex{
+  height: 180rpx;
+}
+.userinfo_first{
+  float: left;
+  display: flex;
+  flex-direction:column;
+}
+#comment{
+  float: left;
+  width: 500rpx;
+  margin-left: 20rpx;
+}
+.fr{
+  font-size: 24rpx;
+  color: #999;
+  height: 36rpx;
+  width: 680rpx;
+  padding-top: 15rpx;
+  position: relative;
+  bottom: 6rpx;
+  right: 15rpx;
+}
+#user_author{
+  font-size: 26rpx;
+  float: left;
+}
+#show_count{
+  float: right;
+}
+#item-info{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+}
+.number{
+  float: right;
+  font-size: 30rpx;
+}
+.blank{
+  height: 650rpx;
+}

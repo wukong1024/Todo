@@ -1,0 +1,54 @@
+<view class="top_bar">
+  <scroll-view class="nav" scroll-x="true" scroll-with-animation='true' scroll-left="{{navScrollLeft}}">
+    <view class="item {{cate_id==item.id?'act':''}}" wx:for='{{dreamsNav}}' data-id="{{item.id}}" data-index="{{index}}" bindtap='navTab'>{{item.title}}</view>
+  </scroll-view>
+</view>
+
+<view class='search'>
+  <input confirm-type='search' value='{{key}}' placeholder='输入搜索关键词' bindinput='searchInput' bindconfirm='searchSubmit'></input>
+</view>
+
+<view class='dream-list' bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+  <block wx:for="{{dreamsList.list_data}}">
+    <block>
+      <navigator url='../detail/detail?id={{item.id}}&is_overdue={{item.is_overdue}}' class='{{item.cover?"item":"item-mult"}}'>
+        <view class='item-flex'>
+          <view class='userinfo_first'>
+            <image class="userinfo-avatar" src='{{item.avatar}}'></image>
+          </view>
+          <view id='comment'>
+            <view class='item-title'>
+              {{item.title}}
+              <view class='number'>
+                {{item.collect_count}}/{{item.need_number}}
+              </view>
+            </view>
+            <view class='item-info'>
+              <text id='item-info'>{{item.content}}</text>
+            </view>
+          </view>
+
+          <view class='fr'>
+          <view id='user_author'>{{item.author}}</view>
+          <view id='show_count'>
+              {{item.comment_count}}
+              <image class='icon' src="/image/icon_comment.png"></image>
+              {{item.view_count}}
+              <image class='icon' src="/image/icon_read.png"></image></view>
+          </view>
+
+        </view>
+      </navigator>
+    </block>
+  </block>
+
+  <view class='not_dream' wx:if="{{dreamsList.page==0}}">没有更多了
+    <view class='bottomImage'>
+      <image src='/image/Spage/bottomimage.png' alt=""></image>
+    </view>
+  </view>
+  <view class='blank'>
+
+  </view>
+
+</view>

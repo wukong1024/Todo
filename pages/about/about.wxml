@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<view class='logothing'>
+  <image class='logo' src='/image/logo.jpg'></image>
+  <view>海大支点</view>
+  <view class='version'>版本号：内测2.2</view>
+  <button bindtap='include'>团队介绍</button>
+</view>

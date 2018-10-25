@@ -1,0 +1,88 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx45cf97fef223196a",
+	"projectname": "Todo",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": -1,
+					"name": "release",
+					"pathName": "pages/release/release",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "check",
+					"pathName": "pages/check/check",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "openId",
+					"pathName": "pages/test/openId/openId",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "table",
+					"pathName": "pages/test/table/table",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/test/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "include",
+					"pathName": "pages/test/include/include",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "noRe",
+					"pathName": "pages/noRe/noRe"
+				}
+			]
+		}
+	}
+}

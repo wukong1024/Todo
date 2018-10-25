@@ -1,0 +1,62 @@
+<!--pages/personal/personal.wxml-->
+<view class='body'>
+  <form bindsubmit="formSubmit">
+    <view class='item1'>
+      <view class='name'>姓名:</view>
+      <text class='star'>*</text>
+      <input type='text' name='name' value='{{form.name}}'></input>
+    </view>
+    <view class='item'>
+      <view class='sex'>性别：</view>
+      <radio-group class='radio-group' name='sex' >
+        <label>
+          <radio value="1" checked='true'>男</radio>
+        </label>
+        <label>
+          <radio value="2" checked="{{form.sex=='2'?'true':''}}">女</radio>
+        </label>
+      </radio-group>
+    </view>
+    <view class='item'>
+      <view class='major'>专业:</view>
+      <text class='star'>*</text>
+      <input type='text' name='major'value='{{form.major}}'></input>
+    </view>
+
+
+    <view class='item'>
+      <view class='grade'>年级：</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker" >
+          {{array[index]}}
+          <text class='inter'>(点击可切换)</text>
+        </view>
+      </picker>
+    </view>
+
+
+    <view class='item'>
+      <view class='phone'>手机：</view>
+      <text class='star'>*</text>
+      <input type='number' name='phone' value='{{form.phone}}'></input>
+    </view>
+    <view class='item'>
+      <view class='qq'>QQ：</view>
+      <text class='star'>*</text>
+      <input type='number' name='qq' value='{{form.qq}}'></input>
+    </view>
+    <!-- <view class='item'>
+      <view class='wechat'>微信：</view>
+      <text class='star'>*</text>
+      <input type='text' name='wechat' value='{{form.wechat}}'></input>
+    </view> -->
+    <view class='item'>
+      <view class='email'>邮箱：</view>
+      <text class='star'>*</text>
+      <input type='text' name='email' value='{{form.email}}'></input>
+    </view>
+    <view class='keep'>
+      <button formType="submit">保存</button>
+    </view>
+  </form>
+</view>

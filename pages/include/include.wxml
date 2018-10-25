@@ -1,0 +1,13 @@
+<!--pages/include/include.wxml-->
+<view class='body'>
+  <view class='inner'>“宇能”</view>
+  <view class='item'>【我们的理念】:</view>
+  <view class='item by'>创新 担当 分享 向上 </view>
+  <view class='item'>【我们的目标】:</view>
+  <view class='item bw'>旨在引领海大学子开拓创新、实现梦想、共创未来，增强海大学子的竞争力，加强海南大学的影响力。引领学生为实现梦想而不断努力，同时也为海大学子提供一个实现梦想的平台，在这里，你可以找到志同道合的伙伴，可以发现各种各样的梦想，“有趣的灵魂万里挑一”，在这里，你会结识到有趣的人，在追逐梦想的路上获得强大的助力。此外我们还会帮助海大学子申请到人生第一项专利，努力提高海大的专利申请比例。</view>
+</view>
+
+<view id='egg'>
+  <button bindtap='updateDreamsList' id='gg'>
+  </button>
+</view>

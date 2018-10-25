@@ -1,0 +1,35 @@
+/* pages/include/include.wxss */
+page{
+  background-color: ghostwhite;
+}
+.inner{
+  font-size: 44rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item{
+  margin: 20rpx 30rpx;
+  font-size: 40rpx;
+}
+.by,.bw{
+  font-size: 32rpx;
+}
+.bw{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+#egg{
+    margin-top: 200rpx;
+    align-items: center;
+    height: 50rpx;
+
+}
+#gg{
+  height: 50rpx;
+}

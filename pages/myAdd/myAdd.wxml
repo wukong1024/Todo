@@ -1,0 +1,23 @@
+<block wx:if='{{dreamsList.list_data.length>0}}'>
+  <swiper class='swiperClass' autoplay="true" indicator-color="#a39f99" indicator-dots interval="4000" duration="1000" previous-margin="55rpx" next-margin="55rpx" circular bindchange="bindchange" bindtap='swiperclick'>
+    <block wx:for="{{dreamsList.list_data}}" wx:key="{{index}}">
+      <swiper-item>
+        <navigator url='../detail/detail?id={{item.id}}&is_overdue={{item.is_overdue}}'>
+          <view class="slide-view {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill' bindtap='swiperclick'>
+            <view class='listTitle'>{{item.title}}</view>
+            <view class='listComment'>{{item.content}}</view>
+            <view class='ps'>{{item.ps}}</view>
+            <view class='author'>{{item.author}}</view>
+            <view class='time'>{{item.cTime}}</view>
+          </view>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+<block wx:else>
+  <view class='container'>
+  <image src='/image/no-join.png'></image>
+  <view class='no-dream'>你还没有加入梦想哦...</view>
+  </view>
+</block>

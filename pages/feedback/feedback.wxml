@@ -1,0 +1,8 @@
+<view class='first'>
+  <form bindsubmit="formSubmit">
+    <view class='title'>梦想鞭策</view>
+    <view class='advise'>留下您的建议，督促我们的工作:</view>
+    <textarea id='advise' name='content' maxlength='500' placeholder='......' bindinput='watchContent'></textarea>
+    <button formType="submit"  type='primary' disabled="{{disabled}}">提交</button>
+  </form>
+</view>

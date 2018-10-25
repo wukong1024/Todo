@@ -1,0 +1,42 @@
+/* pages/personal/personal.wxss */
+page{
+  background-color: rgb(240, 240, 240);
+}
+.body{
+  font-size: 34rpx;
+  background-color: white;
+  margin: 40rpx;
+  margin-top: 60rpx;
+}
+.name,.sex,.major,.grade,.phone,.qq,.wechat,.email{
+  float: left;
+  width: 20%;
+}
+input{
+  border: gainsboro 1rpx solid;
+  width: 75%;
+}
+.item1{
+  padding-top: 28rpx;
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+}
+.item,.keep{
+  padding-top: 52rpx;
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+}
+.keep{
+  padding-bottom: 30rpx;
+}
+button{
+  width: 60%;
+}
+.inter{
+  font-size: 25rpx;
+  color: grey;
+}
+.star{
+  color: red;
+  float: right;
+}

@@ -1,0 +1,62 @@
+<template name="comment">
+  <block wx:if="{{close_comment==1}}">
+    <view class='comment-empty'>
+      <view class='comment-empty_info'>评论已关闭</view>
+    </view>
+  </block>
+  <block wx:else>
+
+    <view class='comment-box'>
+      <block wx:if='{{comment_lists.length>0}}'>
+        <view class='comment-title'>热门评论</view>
+        <view class='comment-list'>
+          <!-- 评论列表渲染 -->
+          <view class='comment-list_item' wx:for="{{comment_lists}}">
+            <image src='{{item.headimgurl}}'></image>
+            <view class='comment-content'>
+              <view class='comment-content_name'>
+                <block wx:if='{{item.to_cid>0}}'>
+                  <text class='comment-content_info'>{{item.nickname}} 回复 </text>{{item.to_nickname}}</block>
+                <block wx:else>{{item.nickname}}</block>
+                <view class='comment-like'>
+                  <view class='comment-like_icon {{item.has_like==1?"act":""}}' bindtap='likeFn' data-index="{{index}}"></view>
+                  <text>{{item.like_count}}</text>
+                </view>
+              </view>
+              <view class='comment-content_content'>{{item.content}}</view>
+              <view class='comment-content_info'>
+                {{item.cTime}}
+                <text class='conmment-content_reply' bindtap='replyComment' data-index="{{index}}">回复</text>
+                <text class='comment-del' wx:if="{{item.is_mine==1}}" data-index="{{index}}" bindtap='delComment'>删除</text>
+              </view>
+            </view>
+          </view>
+
+          <view style='padding:30rpx; text-align:center;font-size:28rpx;' wx:if="{{comment_lastid==0}}">没有更多</view>
+        </view>
+      </block>
+      <view class='comment-empty' wx:else>
+        <image src='/image/empty.png'></image>
+        <view class='comment-empty_info'>还没有人评论，快来抢沙发~</view>
+      </view>
+    </view>
+
+    <view class='comment-nav'>
+      <view class='comment-nav_arrow' bindtap='backFn'></view>
+      <view class='comment-nav_input'>
+        <input placeholder='{{commentplaceholder}}' value='{{inputComment}}' bindinput='inputComment' bindconfirm="submitComment"></input>
+      </view>
+      <view class='comment-nav_comment' bindtap='submitComment'></view>
+
+      <button open-type='share' class='comment-nav_share' bindtap=''></button>
+    </view>
+  </block>
+
+  <block wx:if="{{is_author=='1' || is_overdue=='1' || is_overflow=='1'}}">
+
+  </block>
+  <block wx:else>
+      <view class='comment-nav_collect {{has_collect==1?"act":""}}' bindtap='collectComment'></view>
+    <view id="join"> {{has_collect==1?"退出":"加入"}}</view>
+  </block>
+</template>

@@ -1,0 +1,22 @@
+/* pages/about/about.wxss */
+.logo{
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 100rpx;
+}
+.logothing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.version{
+  color: rgb(68, 68, 68);
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+button{
+  background-color: rgba(102, 148, 209, 0.726);
+  margin-top: 100rpx;
+  width: 400rpx;
+  font-size: 32rpx;
+}
